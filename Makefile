@@ -6,8 +6,8 @@ test:
 	go test ./pkg/... ./cmd/... -coverprofile cover.out
 
 .PHONY: bin
-bin: fmt vet
-	go build -o bin/kubectl-demo github.com/jiaolici/kubectl-demo/cmd/plugin
+bin-ctr: fmt vet
+	go build -o bin/kubectl-ctr.exe github.com/jiaolici/kubectl-demo/cmd/plugin/ctr
 
 .PHONY: fmt
 fmt:

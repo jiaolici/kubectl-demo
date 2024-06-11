@@ -89,7 +89,7 @@ func RootCmd() *cobra.Command {
 	}
 
 	cobra.OnInitialize(initConfig)
-
+	cmd.Flags().BoolVarP(&o.version, "version", "v", false, "Displays the current version number")
 	//KubernetesConfigFlags = genericclioptions.NewConfigFlags(false)
 	o.configFlags.AddFlags(cmd.Flags())
 
